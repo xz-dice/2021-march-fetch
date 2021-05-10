@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.33)
 # Database: fetch
-# Generation Time: 2021-05-10 13:05:45 +0000
+# Generation Time: 2021-05-10 14:13:44 +0000
 # ************************************************************
 
 
@@ -40,7 +40,6 @@ CREATE TABLE `dogs` (
   `origin` varchar(255) DEFAULT NULL,
   `country_code` varchar(255) DEFAULT NULL,
   `description` text,
-  `history` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
