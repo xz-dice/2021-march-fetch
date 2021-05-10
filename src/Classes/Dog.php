@@ -1,4 +1,5 @@
 <?php
+namespace Fetch\Classes;
 
 Class Dog {
     private $bredFor;
