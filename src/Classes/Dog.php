@@ -4,8 +4,10 @@ namespace Fetch\Classes;
 Class Dog {
     private $bredFor;
     private $breedGroup;
-    private $height;
-    private $weight;
+    private $heightImperial;
+    private $heightMetric;
+    private $weightImperial;
+    private $weightMetric;
     private $lifeSpan;
     private $name;
     private $origin;
