@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 30%;
+}
+
+article img {
+    width: 100%;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
