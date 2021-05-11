@@ -7,6 +7,8 @@ require_once 'vendor/autoload.php';
 <html lang="en-GB">
     <head>
         <title>Fetch</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
         <link href="css/normalize.css" type="text/css" rel="stylesheet" />
         <link href="css/styles.css" type="text/css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +29,7 @@ require_once 'vendor/autoload.php';
                     <h3>name</h3>
                     <p>temperament</p>
                     <p>weight</p>
-                    <a>Fetch!</a>
+                    <a href="index.php">Fetch!</a>
                 </div>
             </article>
             <article>
