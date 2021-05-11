@@ -1,0 +1,132 @@
+/*-------------------------------------------------------------------
+                              WHOLE PAGE
+ -------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background-color: #F0D53E;
+    color: #202020;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    width: 70%;
+    left: 15%;
+}
+
+*:focus {
+    outline: #202020 solid 4px;
+    outline-offset: 1px;
+}
+
+/*-------------------------------------------------------------------
+                                 HEADER
+ -------------------------------------------------------------------*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 70px 0 30px;
+}
+
+header img {
+    width: 200px;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+header h1 {
+    margin: 1rem 0;
+}
+
+header h4 {
+    margin: 0.1rem 0;
+}
+
+/*-------------------------------------------------------------------
+                                  MAIN
+ -------------------------------------------------------------------*/
+
+h3, a {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+p {
+    font-weight: 300;
+}
+
+/*-------------------------------------------------------------------
+                                   LINKS
+ -------------------------------------------------------------------*/
+
+a {
+    border: #202020 solid 3px;
+    border-radius: 4px;
+}
+
+a {
+    background-color: #FFFFFF;
+    padding: 5px 15px;
+    transition: color 150ms linear 50ms, background-color 150ms linear 50ms;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #202020;
+}
+
+a:hover, a:focus {
+    color: #F0D53E;
+    background-color: #202020;
+}
+
+/*-------------------------------------------------------------------
+                                   FOOTER
+ -------------------------------------------------------------------*/
+
+footer {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    margin: 20px 10px 60px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer img {
+    width: 100%;
+}
+
+footer p {
+    margin: 0.1rem 0 0.1rem 2rem;
+}
+
+/*-------------------------------------------------------------------
+                             NARROW RESOLUTIONS
+ -------------------------------------------------------------------*/
+
+@media screen and (max-width: 850px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        width: 100%;
+        left: 0;
+        margin: 0 6px;
+    }
+}
