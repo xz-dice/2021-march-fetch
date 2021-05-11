@@ -24,13 +24,13 @@ require_once 'vendor/autoload.php';
         <main>
             <article>
                 <div>
-                    <img src="assets/dog-images/1.jpeg" />
+                    <img tabindex="2" src="assets/dog-images/1.jpeg" />
                 </div>
                 <div>
-                    <h3>name</h3>
-                    <p>temperament</p>
-                    <p>weight</p>
-                    <a href="index.php">Fetch!</a>
+                    <h3 tabindex="2">name</h3>
+                    <p tabindex="2">temperament</p>
+                    <p tabindex="2">weight</p>
+                    <a tabindex="2" href="index.php">Fetch!</a>
                 </div>
             </article>
             <article>
