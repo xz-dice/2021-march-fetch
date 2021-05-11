@@ -117,7 +117,7 @@ a:hover, a:focus {
 footer {
     display: grid;
     grid-template-columns: 3rem 1fr;
-    margin-bottom: 60px;
+    margin: 0 10px 60px;
 }
 
 footer div {
@@ -132,4 +132,22 @@ footer img {
 
 footer p {
     margin: 0.1rem 0 0.1rem 2rem;
+}
+
+/*-------------------------------------------------------------------
+                             NARROW RESOLUTIONS
+ -------------------------------------------------------------------*/
+
+@media screen and (max-width: 1300px) {
+    body {
+        width: 70%;
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        width: 100%;
+        left: 0;
+    }
 }
