@@ -1,26 +1,29 @@
 <?php
 
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 $url = 'https://dev.io-academy.uk/resources/doggies.json';
 $request = curl_init($url);
 curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec($request);
 curl_close($request);
-$thing = json_decode($response, true);
+$dogs = json_decode($response, true);
 
 echo '<pre>';
-var_dump($thing);
+var_dump($dogs);
 echo '</pre>';
 
+// prepare the VALUES statement to put into the database
 $result = '';
 
-foreach ($thing['data'] as $dog) {
-    $result .= '(' . $dog['name'] . ',' . $dog['temperament'] . ',' . $dog['weight']['metric'] . ')';
+foreach ($dogs['data'] as $dog) {
+    $result .= '(' . "'" . $dog['id'] . "'" . ', ' . "'" . $dog['name'] . "'" . ', ' . "'" . $dog['temperament'] . "'" . ', ' . "'" . $dog['weight']['imperial'] . "'" . ', ' .  "'" . $dog['weight']['metric'] . "'" . ', ' . "'" . $dog['height']['imperial'] . "'" . ', ' . "'" . $dog['height']['metric'] . "'" . ', ' . "'" . $dog['bred_for'] . "'" . ', ' . "'" . $dog['bred_group'] . "'" . ', ' . "'" . $dog['life_span'] . "'" . ', ' . "'" . $dog['origin'] . "'" . ', ' . "'" . $dog['country_code'] . "'" . ', ' . "'" . $dog['description'] . "'" . '),';
 }
 
-echo $result;
+$trimmedResult = trim($result, ",");
 
+echo $trimmedResult;
 
-// INSERT INTO dogs VALUES ('NAME', 'TEMPERAMENT', 'WEIGHT')
-// We need to put in the quotes?
+$db = new PDO('mysql:host=db; dbname=fetch', 'root', 'password');
+$query = $db->prepare("INSERT INTO `dogs` (`id`, `name`, `temperament`, `weight_imperial`, `weight_metric`, `height_imperial`, `height_metric`, `bred_for`, `breed_group`, `life_span`, `origin`, `country_code`, `description`) VALUES $trimmedResult;");
+$query->execute();
