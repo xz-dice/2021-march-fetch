@@ -49,33 +49,8 @@ header h4 {
 }
 
 /*-------------------------------------------------------------------
-                              INDEX.PHP MAIN
+                                  MAIN
  -------------------------------------------------------------------*/
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-article {
-    text-align: center;
-    margin: 20px;
-}
-
-article div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-article img {
-    width: 100%;
-}
-
-article img, article a {
-    border: #202020 solid 3px;
-    border-radius: 4px;
-}
 
 h3, a {
     font-weight: 500;
@@ -84,6 +59,15 @@ h3, a {
 
 p {
     font-weight: 300;
+}
+
+/*-------------------------------------------------------------------
+                                   LINKS
+ -------------------------------------------------------------------*/
+
+a {
+    border: #202020 solid 3px;
+    border-radius: 4px;
 }
 
 a {
@@ -95,14 +79,6 @@ a {
 
 a:link, a:visited {
     color: #202020;
-}
-
-article a, article h3, article p {
-    margin: 0.6rem 0;
-}
-
-article h3 {
-    margin-top: 1rem;
 }
 
 a:hover, a:focus {
