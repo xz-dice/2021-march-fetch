@@ -8,7 +8,6 @@ class DogDisplayer {
      * @param array $dogs
      * @return string
      */
-
     public static function displayMainPage(array $dogs): string {
         $result = '';
         foreach ($dogs as $dog) {
