@@ -8,6 +8,9 @@ main {
 }
 
 article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     margin: 20px;
 }
