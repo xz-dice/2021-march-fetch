@@ -1,7 +1,7 @@
 <?php
 namespace Fetch\Classes;
 
-Class Dog {
+class Dog {
     private $id;
     private $bredFor;
     private $breedGroup;
