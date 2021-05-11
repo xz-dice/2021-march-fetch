@@ -98,7 +98,7 @@ a:hover, a:focus {
 footer {
     display: grid;
     grid-template-columns: 3rem 1fr;
-    margin: 0 10px 60px;
+    margin: 20px 10px 60px;
 }
 
 footer div {
