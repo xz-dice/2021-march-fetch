@@ -25,6 +25,3 @@ class DogDisplayer {
         return $result;
     }
 }
-
-
-
