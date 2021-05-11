@@ -17,9 +17,9 @@ require_once 'vendor/autoload.php';
     <body>
         <header>
             <img src="assets/fetchDog.svg" alt="Fetch Logo" />
-            <h1>FETCH</h1>
-            <h4>An app which gives you a ruff idea of which dog is best for you.</h4>
-            <h4>You'd be barking mad not to try it.</h4>
+            <h1 tabindex="1">FETCH</h1>
+            <h4 tabindex="1">An app which gives you a ruff idea of which dog is best for you.</h4>
+            <h4 tabindex="1">You'd be barking mad not to try it.</h4>
         </header>
         <main>
             <article>
@@ -83,8 +83,8 @@ require_once 'vendor/autoload.php';
                 <img src="assets/paw.svg" />
             </div>
             <div>
-                <p>This page will lead to a best friend you want to stick by.</p>
-                <p>Companion app coming soon.</p>
+                <p tabindex="3">This page will lead to a best friend you want to stick by.</p>
+                <p tabindex="3">Companion app coming soon.</p>
             </div>
         </footer>
     </body>
