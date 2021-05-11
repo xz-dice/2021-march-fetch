@@ -26,7 +26,4 @@ class DogDisplayer {
 }
 
 
-$dogId = 6;
-
-
 
