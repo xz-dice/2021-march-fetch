@@ -2,6 +2,7 @@
 namespace Fetch\Classes;
 
 Class Dog {
+    private $id;
     private $bredFor;
     private $breedGroup;
     private $heightImperial;
@@ -14,6 +15,14 @@ Class Dog {
     private $temperament;
     private $countryCode;
     private $description;
+
+    /** Function that returns the id property
+     * @return string id property
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
 
     /** Function that returns the Bred For property
      * @return string Bred For property

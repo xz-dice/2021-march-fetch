@@ -6,7 +6,7 @@ class Db {
 
     protected \PDO $db;
 
-    public function __construct()
+    function __construct()
     {
         $this->db = new \PDO('mysql:host=db; dbname=fetch', 'root', 'password');
     }

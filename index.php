@@ -1,8 +1,9 @@
 <?php
 
 require_once 'vendor/autoload.php';
-
-$dogs = \Fetch\Hydrators\DogHydrator::getDogs($db);
+$db = new \Fetch\Classes\Db();
+$dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
+$displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
 
 ?>
 
@@ -24,9 +25,7 @@ $dogs = \Fetch\Hydrators\DogHydrator::getDogs($db);
             <h4 tabindex="1">You'd be barking mad not to try it.</h4>
         </header>
         <main>
-            <?php
-
-            ?>
+            <?= $displayDogs; ?>
         </main>
         <footer>
             <div>
