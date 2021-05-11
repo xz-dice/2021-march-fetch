@@ -31,3 +31,13 @@ article a, article h3, article p {
 article h3 {
     margin-top: 1rem;
 }
+
+/*-------------------------------------------------------------------
+                             NARROW RESOLUTIONS
+ -------------------------------------------------------------------*/
+
+@media screen and (max-width: 850px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}

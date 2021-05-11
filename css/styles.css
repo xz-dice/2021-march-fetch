@@ -14,9 +14,9 @@ html {
 }
 
 body {
-    width: 50%;
     position: relative;
-    left: 25%;
+    width: 70%;
+    left: 15%;
 }
 
 *:focus {
@@ -119,14 +119,11 @@ footer p {
                              NARROW RESOLUTIONS
  -------------------------------------------------------------------*/
 
-@media screen and (max-width: 1300px) {
-    body {
-        width: 70%;
-        left: 15%;
-    }
-}
-
 @media screen and (max-width: 850px) {
+    html {
+        font-size: 14px;
+    }
+
     body {
         width: 100%;
         left: 0;
