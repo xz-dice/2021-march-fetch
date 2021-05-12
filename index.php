@@ -18,23 +18,10 @@ $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <header>
-            <img src="assets/fetchDog.svg" alt="Fetch Logo" />
-            <h1 tabindex="1">FETCH</h1>
-            <h4 tabindex="1">An app which gives you a ruff idea of which dog is best for you.</h4>
-            <h4 tabindex="1">You'd be barking mad not to try it.</h4>
-        </header>
+        <?php include_once 'src/Templates/header.php' ?>
         <main>
             <?= $displayDogs; ?>
         </main>
-        <footer>
-            <div>
-                <img src="assets/paw.svg" />
-            </div>
-            <div>
-                <p tabindex="3">This page will lead to a best friend you want to stick by.</p>
-                <p tabindex="3">Companion app coming soon.</p>
-            </div>
-        </footer>
+        <?php include_once 'src/Templates/footer.php' ?>
     </body>
 </html>
