@@ -23,8 +23,6 @@ article div {
 
 article img {
     width: 100%;
-    border: #202020 solid 3px;
-    border-radius: 4px;
 }
 
 article a, article h3, article p {

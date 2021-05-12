@@ -58,6 +58,11 @@ header h4 {
                                   MAIN
  -------------------------------------------------------------------*/
 
+main img {
+    border: #202020 solid 3px;
+    border-radius: 4px;
+}
+
 h3, a {
     font-weight: 500;
     font-size: 1.2rem;
