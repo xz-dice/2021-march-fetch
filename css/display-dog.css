@@ -23,6 +23,7 @@ article div {
 
 article img {
     width: 50%;
+    align-self: center;
 }
 
 article a, article h3, article p {
@@ -31,4 +32,18 @@ article a, article h3, article p {
 
 article h3 {
     margin-top: 1rem;
+}
+
+/*-------------------------------------------------------------------
+                             NARROW RESOLUTIONS
+ -------------------------------------------------------------------*/
+
+@media screen and (max-width: 850px) {
+    article {
+        flex-direction: column;
+    }
+    article div {
+        padding-left: 0;
+        margin-top: 30px;
+    }
 }
