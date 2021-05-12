@@ -19,7 +19,7 @@ class DogDisplayer {
                 $result .= '<h3 tabindex="2">' . $dog->getName() . '</h3>';
                 $result .= '<p tabindex="2">' . $dog->getTemperament() . '</p>';
                 $result .= '<p tabindex="2">' . $dog->getWeightMetric() . ' kg</p>';
-                $result .= '<div><a tabindex="2" href="display-dog.php?name=' . $dog->getId() . '" aria-label="click here for more info about this dog">Fetch!</a></div>';
+                $result .= '<div><a tabindex="2" href="display-dog.php?id=' . $dog->getId() . '" aria-label="click here for more info about this dog">Fetch!</a></div>';
                 $result .= '</div>';
                 $result .= '</article>';
             }
