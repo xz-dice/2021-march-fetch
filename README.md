@@ -18,5 +18,6 @@ Auto Loading
 Database and scraping
 - Create a database called `fetch`
 - Import the `fetch.sql` file
+- Input your local DB credentials into `scrapeData.php`
 - To scrape the data, run the command `php scrapeData.php` from the `scripts` directory 
 
