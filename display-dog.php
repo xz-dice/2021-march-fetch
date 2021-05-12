@@ -23,7 +23,7 @@ $displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dogs[$dogID - 1]
     <body>
         <?php include_once 'src/Prefabs/header.php' ?>
         <main>
-            <a href="index.php">Back to all dogs</a>
+            <a tabindex="2" href="index.php">Back to all dogs</a>
             <?= $displayDog; ?>
         </main>
         <?php include_once 'src/Prefabs/footer.php' ?>
