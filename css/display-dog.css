@@ -26,14 +26,6 @@ article img {
     align-self: center;
 }
 
-article a, article h3, article p {
-    margin: 0.6rem 0;
-}
-
-article h3 {
-    margin-top: 1rem;
-}
-
 /*-------------------------------------------------------------------
                              NARROW RESOLUTIONS
  -------------------------------------------------------------------*/
