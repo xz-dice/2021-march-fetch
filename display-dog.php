@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 $db = new \Fetch\Classes\Db();
 $dogId = $_GET['Id'] ?? 0;
 $dog = \Fetch\Hydrators\DogHydrator::getSingleDog($db->getDb(), $dogId);
-if (count($dog) > 0) {
+if ($dog) {
     $displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dog[0]);
 } else {
     header('Location: index.php');
@@ -23,11 +23,11 @@ if (count($dog) > 0) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <?php include_once 'src/Prefabs/header.php' ?>
+        <?php include_once 'src/Templates/header.php' ?>
         <main>
             <a tabindex="2" href="index.php">Back to all dogs</a>
             <?= $displayDog; ?>
         </main>
-        <?php include_once 'src/Prefabs/footer.php' ?>
+        <?php include_once 'src/Templates/footer.php' ?>
     </body>
 </html>

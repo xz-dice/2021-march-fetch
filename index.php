@@ -18,10 +18,10 @@ $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <?php include_once 'src/Prefabs/header.php' ?>
+        <?php include_once 'src/Templates/header.php' ?>
         <main>
             <?= $displayDogs; ?>
         </main>
-        <?php include_once 'src/Prefabs/footer.php' ?>
+        <?php include_once 'src/Templates/footer.php' ?>
     </body>
 </html>
