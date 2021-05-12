@@ -28,11 +28,9 @@ class DogDisplayer {
 
     public static function displayDetailedInfo(\Fetch\Classes\Dog $dog): string {
         $result = '<article>';
-        $result .= '<div>';
         $result .= '<img tabindex="2" src="assets/dog-images/' . $dog->getId() . '.jpeg" alt="' . $dog->getName() .'">';
-        $result .= '</div>';
         $result .= '<div>';
-        $result .= '<h3 tabindex="2">Name: ' . $dog->getName() . '</h3>';
+        $result .= '<h3 tabindex="2">' . $dog->getName() . '</h3>';
         $result .= '<p tabindex="2">Temperament: ' . $dog->getTemperament() . '</p>';
         $result .= '<p tabindex="2">Weight: ' . $dog->getWeightMetric() . ' kg</p>';
         if ($dog->getWeightImperial() !== '') {
