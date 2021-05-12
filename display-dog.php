@@ -1,5 +1,13 @@
 <?php
 
+require_once 'vendor/autoload.php';
+$db = new \Fetch\Classes\Db();
+$dogID = $_GET['id'];
+// DEBUG
+// $dogs = \Fetch\Hydrators\DogHydrator::getDogDetail($db->getDb(), $dogID);
+$dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
+$displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dogs[$dogID - 1]);
+
 ?>
 
 <html lang="en-GB">
@@ -15,6 +23,7 @@
         <?php include_once 'src/Prefabs/header.php' ?>
         <main>
             <a href="index.php">Back to all dogs</a>
+            <?= $displayDog; ?>
         </main>
         <?php include_once 'src/Prefabs/footer.php' ?>
     </body>

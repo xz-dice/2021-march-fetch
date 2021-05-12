@@ -35,31 +35,31 @@ class DogDisplayer {
         $result .= '<h3 tabindex="2">Name: ' . $dog->getName() . '</h3>';
         $result .= '<p tabindex="2">Temperament: ' . $dog->getTemperament() . '</p>';
         $result .= '<p tabindex="2">Weight: ' . $dog->getWeightMetric() . ' kg</p>';
-        if ($dog->getWeightImperial() !== NULL) {
+        if ($dog->getWeightImperial() !== '') {
             $result .= '<p tabindex="2">Weight: ' . $dog->getWeightImperial() . ' lb</p>';
         }
-        if ($dog->getHeightMetric() !== NULL) {
+        if ($dog->getHeightMetric() !== '') {
             $result .= '<p tabindex="2">Height: ' . $dog->getHeightMetric() . ' cm</p>';
         }
-        if ($dog->getHeightImperial() !== NULL) {
+        if ($dog->getHeightImperial() !== '') {
             $result .= '<p tabindex="2">Height: ' . $dog->getHeightImperial() . '"</p>';
         }
-        if ($dog->getLifeSpan() !== NULL) {
+        if ($dog->getLifeSpan() !== '') {
             $result .= '<p tabindex="2">Life Span: ' . $dog->getLifeSpan() . '</p>';
         }
-        if ($dog->getBreedGroup() !== NULL) {
+        if ($dog->getBreedGroup() !== '') {
             $result .= '<p tabindex="2">Breed Group: ' . $dog->getBreedGroup() . '</p>';
         }
-        if ($dog->getBredFor() !== NULL) {
+        if ($dog->getBredFor() !== '') {
             $result .= '<p tabindex="2">Bred For: ' . $dog->getBredFor() . '</p>';
         }
-        if ($dog->getOrigin() !== NULL) {
+        if ($dog->getOrigin() !== '') {
             $result .= '<p tabindex="2">Origin: ' . $dog->getOrigin() . '</p>';
         }
-        if ($dog->getCountryCode() !== NULL) {
+        if ($dog->getCountryCode() !== '') {
             $result .= '<p tabindex="2">Country Code: ' . $dog->getCountryCode() . '</p>';
         }
-        if ($dog->getDescription() !== NULL) {
+        if ($dog->getDescription() !== '') {
             $result .= '<p tabindex="2">Description: ' . $dog->getDescription() . '</p>';
         }
         $result .= '</div>';
