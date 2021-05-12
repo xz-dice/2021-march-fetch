@@ -4,6 +4,7 @@ require_once 'vendor/autoload.php';
 $db = new \Fetch\Classes\Db();
 $dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
 $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
+$singleDog = \Fetch\Hydrators\DogHydrator::getSingleDog($db->getDb());
 
 ?>
 
@@ -26,6 +27,7 @@ $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
         </header>
         <main>
             <?= $displayDogs; ?>
+            <?= var_dump($singleDog); ?>
         </main>
         <footer>
             <div>
