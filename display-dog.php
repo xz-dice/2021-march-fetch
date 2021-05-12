@@ -14,7 +14,7 @@
     <body>
         <?php include_once 'src/Prefabs/header.php' ?>
         <main>
-            
+            <a href="index.php">Back to all dogs</a>
         </main>
         <?php include_once 'src/Prefabs/footer.php' ?>
     </body>
