@@ -1,11 +1,14 @@
 <?php
 
 require_once 'vendor/autoload.php';
+if (!isset($_GET['Id']) || !is_numeric($_GET['Id'])) {
+    header('Location: index.php');
+}
+$dogId = $_GET['Id'];
 $db = new \Fetch\Classes\Db();
-$dogId = $_GET['Id'] ?? 0;
 $dog = \Fetch\Hydrators\DogHydrator::getSingleDog($db->getDb(), $dogId);
-if ($dog) {
-    $displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dog);
+if ($dog[0] instanceof \Fetch\Classes\Dog) {
+    $displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dog[0]);
 } else {
     header('Location: index.php');
 }
