@@ -5,7 +5,7 @@ $db = new \Fetch\Classes\Db();
 $dogId = $_GET['Id'] ?? 0;
 $dog = \Fetch\Hydrators\DogHydrator::getSingleDog($db->getDb(), $dogId);
 if ($dog) {
-    $displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dog[0]);
+    $displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dog);
 } else {
     header('Location: index.php');
 }
