@@ -2,6 +2,10 @@
 
 namespace Fetch\Classes;
 
+/**
+ * Class DogDisplayer
+ * @package Fetch\Classes
+ */
 class DogDisplayer {
 
     /** Function to generate a long string to output dog articles to main page
@@ -25,6 +29,13 @@ class DogDisplayer {
         }
         return $result;
     }
+
+
+    /**
+     * function to generate a long string of html containing an individual dog article for the dog display page
+     * @param Dog $dog a dog instance containing dog information
+     * @return string a string containing the dog article html
+     */
 
     public static function displayDetailedInfo(\Fetch\Classes\Dog $dog): string {
         $result = '<article>';
