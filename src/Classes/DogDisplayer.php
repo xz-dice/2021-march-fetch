@@ -25,4 +25,27 @@ class DogDisplayer {
         }
         return $result;
     }
+
+    public static function displayDetailedInfo(\Fetch\Classes\Dog $dog): string {
+        $result = '<article>';
+        $result .= '<div>';
+        $result .= '<img tabindex="2" src="assets/dog-images/' . $dog->getId() . '.jpeg" alt="' . $dog->getName() .'">';
+        $result .= '</div>';
+        $result .= '<div>';
+        $result .= '<h3 tabindex="2">Name: ' . $dog->getName() . '</h3>';
+        $result .= '<p tabindex="2">Temperament: ' . $dog->getTemperament() . '</p>';
+        $result .= '<p tabindex="2">Weight: ' . $dog->getWeightMetric() . ' kg</p>';
+        $result .= '<p tabindex="2">Weight: ' . $dog->getWeightImperial() . ' lb</p>';
+        $result .= '<p tabindex="2">Height: ' . $dog->getHeightMetric() . ' cm</p>';
+        $result .= '<p tabindex="2">Height: ' . $dog->getHeightImperial() . '"</p>';
+        $result .= '<p tabindex="2">Life Span: ' . $dog->getLifeSpan() . '</p>';
+        $result .= '<p tabindex="2">Breed Group: ' . $dog->getBreedGroup() . '</p>';
+        $result .= '<p tabindex="2">Bred For: ' . $dog->getBredFor() . '</p>';
+        $result .= '<p tabindex="2">Origin: ' . $dog->getOrigin() . '</p>';
+        $result .= '<p tabindex="2">Country Code: ' . $dog->getCountryCode() . '</p>';
+        $result .= '<p tabindex="2">Description: ' . $dog->getDescription() . '</p>';
+        $result .= '</div>';
+        $result .= '</article>';
+        return $result;
+    }
 }
