@@ -44,15 +44,23 @@ class DogDisplayer {
         $result .= '<div>';
         $result .= '<h3 tabindex="2">' . $dog->getName() . '</h3>';
         $result .= '<p tabindex="2">Temperament: ' . $dog->getTemperament() . '</p>';
-        $result .= '<p tabindex="2">Weight: ' . $dog->getWeightMetric() . ' kg</p>';
+        $result .= '<p tabindex="2">Weight: ' . $dog->getWeightMetric() . ' kg';
         if ($dog->getWeightImperial() !== '') {
-            $result .= '<p tabindex="2">Weight: ' . $dog->getWeightImperial() . ' lb</p>';
+            $result .= ' / ' . $dog->getWeightImperial() . ' lb';
         }
-        if ($dog->getHeightMetric() !== '') {
-            $result .= '<p tabindex="2">Height: ' . $dog->getHeightMetric() . ' cm</p>';
-        }
-        if ($dog->getHeightImperial() !== '') {
-            $result .= '<p tabindex="2">Height: ' . $dog->getHeightImperial() . '"</p>';
+        $result .= '</p>';
+        if ($dog->getHeightMetric() !== '' || $dog->getHeightImperial() !== '') {
+            $result .= '<p tabindex="2">Height: ';
+            if ($dog->getHeightMetric() !== '') {
+                $result .= $dog->getHeightMetric() . ' cm';
+            }
+            if ($dog->getHeightMetric() !== '' && $dog->getHeightImperial() !== '') {
+                $result .= ' / ';
+            }
+            if ($dog->getHeightImperial() !== '') {
+                $result .= $dog->getHeightImperial() . ' inches';
+            }
+            $result .= '</p>';
         }
         if ($dog->getLifeSpan() !== '') {
             $result .= '<p tabindex="2">Life Span: ' . $dog->getLifeSpan() . '</p>';

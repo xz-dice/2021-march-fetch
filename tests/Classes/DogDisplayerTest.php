@@ -44,7 +44,7 @@ class DogDisplayerTest extends TestCase {
 
     public function testDisplayDetailedInfoSuccess()
     {
-        $expected = '<article><img tabindex="2" src="assets/dog-images/2.jpeg" alt="Cuthbert"><div><h3 tabindex="2">Cuthbert</h3><p tabindex="2">Temperament: Happy</p><p tabindex="2">Weight: 2-3 kg</p><p tabindex="2">Weight: 3-5 lb</p><p tabindex="2">Height: 3-5 cm</p><p tabindex="2">Height: 3-5"</p><p tabindex="2">Life Span: 3-5</p><p tabindex="2">Breed Group: 3-5</p><p tabindex="2">Bred For: 3-5</p><p tabindex="2">Origin: 3-5</p><p tabindex="2">Country Code: 3-5</p><p tabindex="2">Description: 3-5</p></div></article>';
+        $expected = '<article><img tabindex="2" src="assets/dog-images/2.jpeg" alt="Cuthbert"><div><h3 tabindex="2">Cuthbert</h3><p tabindex="2">Temperament: Happy</p><p tabindex="2">Weight: 2-3 kg / 3-5 lb</p><p tabindex="2">Height: 3-5 cm / 3-5 inches</p><p tabindex="2">Life Span: 3-5</p><p tabindex="2">Breed Group: 3-5</p><p tabindex="2">Bred For: 3-5</p><p tabindex="2">Origin: 3-5</p><p tabindex="2">Country Code: 3-5</p><p tabindex="2">Description: 3-5</p></div></article>';
         $dogMock = $this->createMock(Dog::class);
         $dogMock->expects($this->once())
             ->method('getId')
@@ -61,10 +61,10 @@ class DogDisplayerTest extends TestCase {
         $dogMock->expects($this->exactly(2))
             ->method('getWeightImperial')
             ->willReturn('3-5');
-        $dogMock->expects($this->exactly(2))
+        $dogMock->expects($this->exactly(4))
             ->method('getHeightMetric')
             ->willReturn('3-5');
-        $dogMock->expects($this->exactly(2))
+        $dogMock->expects($this->exactly(3))
             ->method('getHeightImperial')
             ->willReturn('3-5');
         $dogMock->expects($this->exactly(2))
