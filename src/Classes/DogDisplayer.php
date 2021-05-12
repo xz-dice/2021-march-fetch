@@ -43,14 +43,14 @@ class DogDisplayer {
         $result .= '<img tabindex="2" src="assets/dog-images/' . $dog->getId() . '.jpeg" alt="' . $dog->getName() .'">';
         $result .= '<div>';
         $result .= '<h3 tabindex="2">' . $dog->getName() . '</h3>';
-        $result .= '<p tabindex="2">Temperament: ' . $dog->getTemperament() . '</p>';
-        $result .= '<p tabindex="2">Weight: ' . $dog->getWeightMetric() . ' kg';
+        $result .= '<p tabindex="2"><span>Temperament:</span> ' . $dog->getTemperament() . '</p>';
+        $result .= '<p tabindex="2"><span>Weight:</span> ' . $dog->getWeightMetric() . ' kg';
         if ($dog->getWeightImperial() !== '') {
             $result .= ' / ' . $dog->getWeightImperial() . ' lb';
         }
         $result .= '</p>';
         if ($dog->getHeightMetric() !== '' || $dog->getHeightImperial() !== '') {
-            $result .= '<p tabindex="2">Height: ';
+            $result .= '<p tabindex="2"><span>Height:</span> ';
             if ($dog->getHeightMetric() !== '') {
                 $result .= $dog->getHeightMetric() . ' cm';
             }
@@ -63,22 +63,22 @@ class DogDisplayer {
             $result .= '</p>';
         }
         if ($dog->getLifeSpan() !== '') {
-            $result .= '<p tabindex="2">Life Span: ' . $dog->getLifeSpan() . '</p>';
+            $result .= '<p tabindex="2"><span>Life Span:</span> ' . $dog->getLifeSpan() . '</p>';
         }
         if ($dog->getBreedGroup() !== '') {
-            $result .= '<p tabindex="2">Breed Group: ' . $dog->getBreedGroup() . '</p>';
+            $result .= '<p tabindex="2"><span>Breed Group:</span> ' . $dog->getBreedGroup() . '</p>';
         }
         if ($dog->getBredFor() !== '') {
-            $result .= '<p tabindex="2">Bred For: ' . $dog->getBredFor() . '</p>';
+            $result .= '<p tabindex="2"><span>Bred For:</span> ' . $dog->getBredFor() . '</p>';
         }
         if ($dog->getOrigin() !== '') {
-            $result .= '<p tabindex="2">Origin: ' . $dog->getOrigin() . '</p>';
+            $result .= '<p tabindex="2"><span>Origin:</span> ' . $dog->getOrigin() . '</p>';
         }
         if ($dog->getCountryCode() !== '') {
-            $result .= '<p tabindex="2">Country Code: ' . $dog->getCountryCode() . '</p>';
+            $result .= '<p tabindex="2"><span>Country Code:</span> ' . $dog->getCountryCode() . '</p>';
         }
         if ($dog->getDescription() !== '') {
-            $result .= '<p tabindex="2">Description: ' . $dog->getDescription() . '</p>';
+            $result .= '<p tabindex="2"><span>Description:</span> ' . $dog->getDescription() . '</p>';
         }
         $result .= '</div>';
         $result .= '</article>';
