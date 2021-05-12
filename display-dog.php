@@ -2,9 +2,13 @@
 
 require_once 'vendor/autoload.php';
 $db = new \Fetch\Classes\Db();
-$dogID = $_GET['Id'];
+$dogID = $_GET['Id'] ?? 0;
 $dog = \Fetch\Hydrators\DogHydrator::getSingleDog($db->getDb(), $dogID);
-$displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dog[0]);
+if (count($dog) > 0) {
+    $displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dog[0]);
+} else {
+    header('Location: index.php');
+}
 
 ?>
 
