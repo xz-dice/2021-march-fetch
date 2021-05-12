@@ -2,11 +2,9 @@
 
 require_once 'vendor/autoload.php';
 $db = new \Fetch\Classes\Db();
-$dogID = $_GET['id'];
-// DEBUG
-// $dogs = \Fetch\Hydrators\DogHydrator::getDogDetail($db->getDb(), $dogID);
-$dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
-$displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dogs[$dogID - 1]);
+$dogID = $_GET['Id'];
+$dog = \Fetch\Hydrators\DogHydrator::getSingleDog($db->getDb(), $dogID);
+$displayDog = \Fetch\Classes\DogDisplayer::displayDetailedInfo($dog[0]);
 
 ?>
 
