@@ -8,12 +8,12 @@ use Fetch\Classes\Dog;
 
 class DogDisplayerTest extends TestCase {
     public function testDisplayMainPageSuccess() {
-        $expected = '<article><div><img tabindex="2" src="assets/dog-images/2.jpeg" alt="Cuthbert"><h3 tabindex="2">Cuthbert</h3><p tabindex="2">Happy</p><p tabindex="2">2-3 kg</p><div><a tabindex="2" href="display-dog.php?name=Cuthbert" aria-label="click here for more info about this dog">Fetch!</a></div></div></article>';
+        $expected = '<article><div><img tabindex="2" src="assets/dog-images/2.jpeg" alt="Cuthbert"><h3 tabindex="2">Cuthbert</h3><p tabindex="2">Happy</p><p tabindex="2">2-3 kg</p><div><a tabindex="2" href="display-dog.php?id=2" aria-label="click here for more info about this dog">Fetch!</a></div></div></article>';
         $dogMock = $this->createMock(Dog::class);
-        $dogMock->expects($this->once())
+        $dogMock->expects($this->exactly(2))
             ->method('getId')
             ->willReturn(2);
-        $dogMock->expects($this->exactly(3))
+        $dogMock->expects($this->exactly(2))
             ->method('getName')
             ->willReturn('Cuthbert');
         $dogMock->expects($this->once())
