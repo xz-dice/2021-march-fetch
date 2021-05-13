@@ -8,7 +8,7 @@ class TemperamentGeneratorTest extends TestCase
 {
     public function testTemperamentGeneratorTestSuccess()
     {
-        $expected = ['Happy', 'Loyal', 'Brave', 'Friendly'];
+        $expected = ['Brave', 'Friendly', 'Happy', 'Loyal'];
         $dogMock = $this->createMock(Dog::class);
         $dogMock->expects($this->once())
             ->method('getTemperament')
