@@ -4,6 +4,9 @@ require_once 'vendor/autoload.php';
 $db = new \Fetch\Classes\Db();
 $dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
 $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
+$temperamentsArray = \Fetch\Classes\TemperamentGenerator::getUniqueTags($dogs);
+$filterButtons = \Fetch\Classes\FilterButtonsDisplayer::displayFilterButtons($temperamentsArray);
+
 ?>
 
 <html lang="en-GB">
@@ -18,6 +21,9 @@ $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
     </head>
     <body>
         <?php include_once 'src/Templates/header.php' ?>
+        <section class="filter-buttons">
+            <?= $filterButtons ?>
+        </section>
         <main>
             <?= $displayDogs; ?>
         </main>
