@@ -25,6 +25,34 @@ article img {
     width: 100%;
 }
 
+.chip {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #FFFFFF;
+    height: 50px;
+    font-size: 16px;
+    line-height: 40px;
+    border-radius: 25px;
+    width: 200px;
+    background-color: #000000;
+}
+
+.chip img {
+    float: left;
+    height: 40px;
+}
+
+.chip div {
+    margin-left: 10px;
+}
+
+/*.bone {*/
+/*    background-image: url("../assets/bone.png");*/
+/*    height: 40px;*/
+/*    width: 40px;*/
+/*}*/
+
 /*-------------------------------------------------------------------
                              NARROW RESOLUTIONS
  -------------------------------------------------------------------*/
