@@ -9,23 +9,23 @@ class FilterButtonsDisplayerTest extends TestCase
 {
     public function testDisplayFilterButtonsSuccess()
     {
-        $expected = '<a href="index.php" class="chip';
+        $expected = '<a href="index.php?temperament=Happy" tabindex="2" aria-label="Search for dogs that are Happy" class="chip';
         $expected .= ' active-temperament';
         $expected .= '">';
         $expected .= '<img src="assets/bone.svg" alt="Bone"/>';
         $expected .= '<div>' . 'Happy' . '</div></a>';
-        $expected .= '<a href="index.php" class="chip';
+        $expected .= '<a href="index.php?temperament=Aggressive" tabindex="2" aria-label="Search for dogs that are Aggressive" class="chip';
         $expected .= '">';
         $expected .= '<img src="assets/bone.svg" alt="Bone"/>';
         $expected .= '<div>' . 'Aggressive' . '</div></a>';
         $temperamentArray = ['Happy', 'Aggressive'];
-        $case = FilterButtonsDisplayer::displayFilterButtons($temperamentArray, 'Happy');
+        $case = FilterButtonsDisplayer::displayFilterButtons($temperamentArray, 'happy');
         $this->assertEquals($expected,$case);
     }
 
     public function testDisplayFilterButtonsFailure()
     {
-        $expected = '<a href="index.php" class="chip';
+        $expected = '<a href="index.php?temperament=Aggressive" tabindex="2" aria-label="Search for dogs that are Aggressive" class="chip';
         $expected .= '">';
         $expected .= '<img src="assets/bone.svg" alt="Bone"/>';
         $expected .= '<div>' . 'Aggressive' . '</div></a>';
