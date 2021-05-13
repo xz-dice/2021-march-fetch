@@ -21,4 +21,19 @@ class TemperamentGeneratorTest extends TestCase
         $result = \Fetch\Classes\TemperamentGenerator::getUniqueTags($input);
         $this->assertEquals($expected, $result);
     }
+
+    public function testTemperamentGeneratorFailure()
+    {
+        $expected = [''];
+        $input = [];
+        $result = \Fetch\Classes\TemperamentGenerator::getUniqueTags($input);
+        $this->assertEquals($expected, $result);
+    }
+
+    public function testTemperamentGeneratorMalformed()
+    {
+        $dog = '';
+        $this->expectException(TypeError::class);
+        \Fetch\Classes\TemperamentGenerator::getUniqueTags($dog);
+    }
 }
