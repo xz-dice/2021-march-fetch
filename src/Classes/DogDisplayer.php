@@ -9,14 +9,15 @@ namespace Fetch\Classes;
 class DogDisplayer {
 
     /** Function to generate a long string to output dog articles to main page
-     * @param array $dogs
-     * @return string
+     * @param array $dogs an array of dog objects to display to the main page
+     * @param string $dogTemperament the dog temperament to filter the displayed dog selection, default is no filter
+     * @return string String containing the dog main HTML content
      */
 
-    public static function displayMainPage(array $dogs): string {
+    public static function displayMainPage(array $dogs, string $dogTemperament = ''): string {
         $result = '';
         foreach ($dogs as $dog) {
-            if ($dog instanceof \Fetch\Classes\Dog) {
+            if ($dog instanceof \Fetch\Classes\Dog && $dog->hasTemperament($dogTemperament)) {
                 $result .= '<article>';
                 $result .= '<div>';
                 $result .= '<img tabindex="2" src="assets/dog-images/' . $dog->getId() . '.jpeg" alt="' . $dog->getName() .'">';

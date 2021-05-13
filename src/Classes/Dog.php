@@ -119,5 +119,18 @@ class Dog {
     {
         return $this->weightMetric;
     }
+
+    /** Function that returns a boolean indicating whether the given temperament is present in the dog, always return true when there is a blank temperament
+     * @param string $temperament the temperament in question
+     * @return bool boolean reflecting if the given temperament is present in the dog
+     */
+    public function hasTemperament(string $temperament) : bool
+    {
+        if ($temperament === '') {
+            return true;
+        } else {
+            return strpos(strtolower($this->getTemperament()), strtolower($temperament)) !== false;
+        }
+    }
 }
 
