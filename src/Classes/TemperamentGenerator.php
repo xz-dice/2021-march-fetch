@@ -9,7 +9,7 @@ class TemperamentGenerator {
      * @return array of dog temperaments
      */
 
-    public static function getUniqueTags(array $dogs) : array
+    public static function getUniqueTags(array $dogs): array
     {
     $result = '';
     foreach ($dogs as $dog) {
