@@ -19,6 +19,6 @@ class TemperamentGenerator {
     }
     $trimmedResult = trim($result, " ,");
     $explodedResult = explode(', ', $trimmedResult);
-    return $uniqueResult = array_unique($explodedResult);
+    return array_values(array_unique($explodedResult));
     }
 }
