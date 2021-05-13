@@ -11,7 +11,7 @@ class FilterButtonsDisplayer {
         $result = '';
         foreach (self::$testArray as $temperament) {
             $result .= '<div class="chip">';
-            $result .= '<img src="assets/bone.png" alt="Bone"/>';
+            $result .= '<img src="assets/bone.jpeg" alt="Bone"/>';
             $result .= '<div>' . $temperament . '</div></div>';
         }
         return $result;
