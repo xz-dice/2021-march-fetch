@@ -29,6 +29,9 @@ class DogDisplayer {
                 $result .= '</article>';
             }
         }
+        if ($result === '') {
+            $result = '<img src="assets/204.jpeg" alt="204 No results found" />';
+        }
         return $result;
     }
 

@@ -32,7 +32,7 @@ class DogDisplayerTest extends TestCase {
 
     public function testDisplayMainPageFailure()
     {
-        $expected = '';
+        $expected = '<img src="assets/204.jpeg" alt="204 No results found" />';
         $dogs = ['dog'];
         $case = DogDisplayer::displayMainPage($dogs);
         $this->assertEquals($expected, $case);
