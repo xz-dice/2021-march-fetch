@@ -119,5 +119,14 @@ class Dog {
     {
         return $this->weightMetric;
     }
+
+    /** Function that returns a boolean indicating whether the given temperament is present in the dog
+     * @param string $temperament the temperament in question
+     * @return bool boolean reflecting if the given temperament is present in the dog
+     */
+    public function hasTemperament(string $temperament) : bool
+    {
+        return strpos($this->getTemperament(), $temperament) !== false;
+    }
 }
 
