@@ -15,8 +15,6 @@ if (isset($_GET['temperament']) && is_string($_GET['temperament'])) {
     $filterButtons = \Fetch\Classes\FilterButtonsDisplayer::displayFilterButtons($temperamentsArray);
 }
 
-
-
 ?>
 
 <html lang="en-GB">
