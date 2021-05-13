@@ -4,15 +4,19 @@ namespace Fetch\Classes;
 
 class FilterButtonsDisplayer {
 
-    private static $testArray = ['Happy', 'Aggressive', 'Dangerous', 'Zedonk'];
-
-    public static function displayFilterButtons(): string
+    public static function displayFilterButtons(array $temperamentsArray, string $currentTemperament = ''): string
     {
         $result = '';
-        foreach (self::$testArray as $temperament) {
-            $result .= '<div class="chip">';
-            $result .= '<img src="assets/bone.jpeg" alt="Bone"/>';
-            $result .= '<div>' . $temperament . '</div></div>';
+        foreach ($temperamentsArray as $temperament) {
+            if(gettype($temperament) === 'string') {
+                $result .= '<a href="index.php" class="chip';
+                if($currentTemperament === $temperament) {
+                    $result .= ' active-temperament';
+                }
+                $result .= '">';
+                $result .= '<img src="assets/bone.svg" alt="Bone"/>';
+                $result .= '<div>' . $temperament . '</div></a>';
+            }
         }
         return $result;
     }
