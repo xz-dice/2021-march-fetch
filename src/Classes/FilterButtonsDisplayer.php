@@ -16,8 +16,8 @@ class FilterButtonsDisplayer {
         $result = '';
         foreach ($temperamentsArray as $temperament) {
             if(gettype($temperament) === 'string') {
-                $result .= '<a href="index.php" tabindex="2" aria-label="Search for dogs that are ' . $temperament . '" class="chip';
-                if($currentTemperament === $temperament) {
+                $result .= '<a href="index.php?temperament=' . $temperament . '" tabindex="2" aria-label="Search for dogs that are ' . $temperament . '" class="chip';
+                if($currentTemperament === strtolower($temperament)) {
                     $result .= ' active-temperament';
                 }
                 $result .= '">';

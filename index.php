@@ -1,11 +1,21 @@
 <?php
 
 require_once 'vendor/autoload.php';
+//header('Location: index.php');
 $db = new \Fetch\Classes\Db();
 $dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
-$displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
 $temperamentsArray = \Fetch\Classes\TemperamentGenerator::getUniqueTags($dogs);
-$filterButtons = \Fetch\Classes\FilterButtonsDisplayer::displayFilterButtons($temperamentsArray);
+
+if (isset($_GET['temperament']) && is_string($_GET['temperament'])) {
+    $dogTemperament = strtolower($_GET['temperament']);
+    $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs, $dogTemperament);
+    $filterButtons = \Fetch\Classes\FilterButtonsDisplayer::displayFilterButtons($temperamentsArray, $dogTemperament);
+} else {
+    $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
+    $filterButtons = \Fetch\Classes\FilterButtonsDisplayer::displayFilterButtons($temperamentsArray);
+}
+
+
 
 ?>
 
