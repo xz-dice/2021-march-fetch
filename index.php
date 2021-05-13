@@ -4,7 +4,8 @@ require_once 'vendor/autoload.php';
 $db = new \Fetch\Classes\Db();
 $dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
 $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
-$filterButtons = \Fetch\Classes\FilterButtonsDisplayer::displayFilterButtons();
+$testArray = ['Happy', 'Aggressive', 'Dangerous', 'Zedonk','Confident','Brave','Tyrannical'];
+$filterButtons = \Fetch\Classes\FilterButtonsDisplayer::displayFilterButtons($testArray);
 ?>
 
 <html lang="en-GB">
