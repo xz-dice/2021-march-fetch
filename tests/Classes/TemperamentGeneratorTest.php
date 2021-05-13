@@ -12,7 +12,7 @@ class TemperamentGeneratorTest extends TestCase
         $dogMock = $this->createMock(Dog::class);
         $dogMock->expects($this->once())
             ->method('getTemperament')
-            ->willReturn('Happy, Loyal');
+            ->willReturn('Happy, Loyal, Brave');
         $dogMock2 = $this->createMock(Dog::class);
         $dogMock2->expects($this->once())
             ->method('getTemperament')
