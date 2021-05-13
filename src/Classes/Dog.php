@@ -129,7 +129,7 @@ class Dog {
         if ($temperament === '') {
             return true;
         } else {
-            return strpos($this->getTemperament(), $temperament) !== false;
+            return strpos(strtolower($this->getTemperament()), strtolower($temperament)) !== false;
         }
     }
 }
