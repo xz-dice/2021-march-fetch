@@ -3,15 +3,16 @@
 require_once 'vendor/autoload.php';
 //header('Location: index.php');
 $db = new \Fetch\Classes\Db();
+$dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
 
 if (isset($_GET['temperament']) && is_string($_GET['temperament'])) {
     $dogTemperament = strtolower($_GET['temperament']);
-    $dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
     $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs, $dogTemperament);
 } else {
-    $dogs = \Fetch\Hydrators\DogHydrator::getDogs($db->getDb());
     $displayDogs = \Fetch\Classes\DogDisplayer::displayMainPage($dogs);
 }
+$temperamentsArray = \Fetch\Classes\TemperamentGenerator::getUniqueTags($dogs);
+
 
 ?>
 
