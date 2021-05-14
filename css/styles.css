@@ -36,6 +36,15 @@ header {
     margin: 70px 0 30px;
 }
 
+header a {
+    background-color: #00000000;
+    border: none;
+}
+
+header a:hover, header a:focus {
+    background-color: #00000000;
+}
+
 header img {
     width: 250px;
 }

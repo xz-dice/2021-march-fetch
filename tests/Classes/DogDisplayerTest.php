@@ -22,6 +22,9 @@ class DogDisplayerTest extends TestCase {
         $dogMock->expects($this->once())
             ->method('getWeightMetric')
             ->willReturn('2-3');
+        $dogMock->expects($this->once())
+            ->method('hasTemperament')
+            ->willReturn(true);
         $dogs = [$dogMock];
         $case = DogDisplayer::displayMainPage($dogs);
         $this->assertEquals($expected, $case);
@@ -29,7 +32,7 @@ class DogDisplayerTest extends TestCase {
 
     public function testDisplayMainPageFailure()
     {
-        $expected = '';
+        $expected = '<img src="assets/204.jpeg" alt="204 No results found" />';
         $dogs = ['dog'];
         $case = DogDisplayer::displayMainPage($dogs);
         $this->assertEquals($expected, $case);
