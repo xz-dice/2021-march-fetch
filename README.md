@@ -2,8 +2,7 @@
 
 **About Fetch**
 
-Fetch is an app which gives you an idea of which dog is best for you.
-An OOP PHP application to scrape data into a DB and display Dogs.
+Fetch is an OOP PHP app which scrapes data from an API into a MySQL database and displays dogs so that you can get an idea of which dog is best for you.
 
 **Installation**
 
